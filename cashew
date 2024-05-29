@@ -1,0 +1,42 @@
+import time
+
+class CashewProcessor:
+    def __init__(self):
+        self.raw_cashews = []
+        self.processed_cashews = []
+
+    def clean_cashews(self):
+        print("Cleaning cashews...")
+        time.sleep(2)
+        print("Cashews cleaned.")
+
+    def shell_cashews(self):
+        print("Shelling cashews...")
+        time.sleep(3)
+        print("Cashews shelled.")
+
+    def dry_cashews(self):
+        print("Drying cashews...")
+        time.sleep(5)
+        print("Cashews dried.")
+
+    def grade_cashews(self):
+        print("Grading cashews...")
+        time.sleep(2)
+        print("Cashews graded.")
+
+    def package_cashews(self):
+        print("Packaging cashews...")
+        time.sleep(2)
+        print("Cashews packaged.")
+
+    def process_cashews(self):
+        self.clean_cashews()
+        self.shell_cashews()
+        self.dry_cashews()
+        self.grade_cashews()
+        self.package_cashews()
+
+if __name__ == "__main__":
+    processor = CashewProcessor()
+    processor.process_cashews()
