@@ -1,0 +1,30 @@
+import time
+
+class NapkinProcessor:
+    def __init__(self):
+        self.napkin_inventory = 1000  # Initial inventory of napkins
+
+    def request_napkins(self, quantity):
+        if quantity <= self.napkin_inventory:
+            print(f"Requesting {quantity} napkins...")
+            time.sleep(2)  # Simulating request time
+            print(f"{quantity} napkins issued.")
+            self.napkin_inventory -= quantity
+        else:
+            print("Insufficient napkins in inventory.")
+
+    def restock_napkins(self, quantity):
+        print(f"Restocking {quantity} napkins...")
+        time.sleep(3)  # Simulating restock time
+        print(f"{quantity} napkins restocked.")
+        self.napkin_inventory += quantity
+
+if __name__ == "__main__":
+    processor = NapkinProcessor()
+
+for example:
+    # Example usage:
+    processor.request_napkins(50)  # Request 50 napkins
+    processor.restock_napkins(200)  # Restock 200 napkins
+
+
